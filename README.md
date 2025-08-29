@@ -1,6 +1,1 @@
-```java
-  public class Test {
-
-  
-  }
-```
+# Gradle + MySql + JPA 
