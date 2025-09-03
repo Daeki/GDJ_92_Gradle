@@ -38,5 +38,15 @@ public class NoticeController {
 		
 		return noticeVO;
 	}
+	
+	@PostMapping("")
+	public boolean add(NoticeVO noticeVO)throws Exception{
+		noticeVO = noticeService.add(noticeVO);
+		if(noticeVO != null) {
+			return true;
+		}
+		
+		return false;
+	}
 
 }

@@ -14,7 +14,7 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@Table(name="notice_files")
+@Table(name="noticefiles")
 @Getter
 @Setter
 @ToString

@@ -33,6 +33,7 @@ class NoticeRepositoryTest {
 	
 	
 	@Test
+	@Rollback(value = false)
 	void test() throws Exception {
 		NoticeVO noticeVO = new NoticeVO();
 		noticeVO.setBoardTitle("titl21");
