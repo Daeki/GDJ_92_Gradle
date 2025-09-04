@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function List(){
 
@@ -6,7 +7,7 @@ function List(){
     const [page, setPage]=useState(0);
 
     useEffect(()=>{
-        fetch(`http://localhost/notice?page=${page}`)
+        fetch(`http://localhost/api/notice?page=${page}`)
             .then(r => r.json())
             .then(r => {
                 console.log(r)
@@ -35,6 +36,9 @@ function List(){
             <div>
                 <h3>Page: {page}</h3>
                 <button onClick={next}>NEXT</button>
+            </div>
+            <div>
+                <Link to="/notice/add">Notice Add</Link>
             </div>
         </>
     )
