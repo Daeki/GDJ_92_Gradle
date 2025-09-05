@@ -99,7 +99,7 @@ function Add(){
         
         setFiles(newFiles)
     }
-
+    // function deleteFile(key){
     function deleteFile(event){
      //setFiles((prev) => [...prev].filter(file => file.key != key)); // 상태 업데이트
         setFiles((prev) => {
