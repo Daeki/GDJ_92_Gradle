@@ -37,6 +37,7 @@ public class SecurityConfig {
 				auth -> {
 					auth
 						.requestMatchers("/api/notice/add").hasRole("ADMIN")
+						.requestMatchers("/api/notice").authenticated()
 						.anyRequest().permitAll();
 					
 					

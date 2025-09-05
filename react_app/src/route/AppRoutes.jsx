@@ -4,6 +4,7 @@ import Index from "../components/Index";
 import Add from "../components/board/Add";
 import StudyParam from "../study/StudyParam";
 import Login from "../components/member/Login";
+import Logout from "../components/member/Logout";
 
 export default function AppRoutes(){
 
@@ -18,6 +19,7 @@ export default function AppRoutes(){
 
                 <Route path="/member/">
                     <Route path="login" element={<Login></Login>}></Route>
+                    <Route path="logout" element={<Logout></Logout>}></Route>
                 </Route>
               
                 <Route path="/study/param" element={<StudyParam />}></Route>

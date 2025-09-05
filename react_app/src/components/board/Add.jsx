@@ -67,7 +67,11 @@ function Add(){
         const formdata = new FormData(e.target) //<form></form>
         fetch("http://localhost/api/notice", {
             method:"POST",
-            body:formdata
+            body:formdata,
+            headers: {
+                
+            }
+            
         })
         .then(r=>r.json())
         .then(r=>{

@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Login(){
+
+    const nav = useNavigate()
 
     function login(e){
         e.preventDefault();
@@ -17,6 +21,9 @@ export default function Login(){
         .then(r=>{
             const header = r.headers;
             console.log(header.get("Accesstoken"))
+            localStorage.setItem("accesstoken", header.get("Accesstoken"))
+            sessionStorage.setItem("accesstoken", header.get("Accesstoken"))
+            nav("/")
         })
         .catch(e=>console.log("ppp ", e))
 
